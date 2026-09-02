@@ -1,7 +1,3 @@
-========================================
-FILE: script.js
-========================================
-js
 const header=document.querySelector('.header');
 window.addEventListener('scroll',()=>header&&header.classList.toggle('scrolled',window.scrollY>8),{passive:true});
 const toggle=document.querySelector('.mobile-toggle'), mobile=document.querySelector('.mobile-nav');
