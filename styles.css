@@ -1402,7 +1402,8 @@ button {
 
   margin: 0 auto;
 
-  padding: 104px 0 80px;
+  /* Raised the entire hero composition */
+  padding: 76px 0 80px;
 
   display: flex;
   flex-direction: column;
@@ -1422,9 +1423,9 @@ button {
   color: var(--burgundy);
 
   font-family: "Cormorant Garamond", serif;
-  font-size: clamp(58px, 7vw, 104px);
+  font-size: clamp(64px, 7vw, 104px);
   font-weight: 500;
-  line-height: 0.9;
+  line-height: 0.88;
   letter-spacing: -0.045em;
 }
 
@@ -1436,14 +1437,37 @@ button {
   display: flex;
   align-items: center;
 
-  padding-top: 25px;
-  padding-bottom: 15px;
+  padding-top: 5px;
+  padding-bottom: 25px;
 }
 
+/* MISSION */
+
 .mission {
-  width: min(570px, 43vw);
+  width: min(630px, 48vw);
   margin-left: 0;
 }
+
+/* LOCATION LINE */
+
+.mission::before {
+  content: "SERVING WAKE, DURHAM & ORANGE COUNTIES";
+
+  display: block;
+
+  margin-bottom: 15px;
+
+  color: var(--burgundy);
+
+  font-family: "Outfit", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+/* MISSION TEXT */
 
 .mission-copy {
   margin: 0;
@@ -1451,10 +1475,10 @@ button {
   color: var(--ink);
 
   font-family: "Cormorant Garamond", serif;
-  font-size: clamp(23px, 2vw, 32px);
+  font-size: clamp(29px, 2.5vw, 38px);
   font-weight: 500;
-  line-height: 1.14;
-  letter-spacing: -0.01em;
+  line-height: 1.12;
+  letter-spacing: -0.012em;
 }
 
 .hero-actions {
@@ -1463,7 +1487,7 @@ button {
   align-items: flex-start;
   gap: 15px;
 
-  margin-top: 27px;
+  margin-top: 30px;
 }
 
 .btn {
@@ -1559,11 +1583,11 @@ button {
   }
 
   .mission {
-    width: min(540px, 50vw);
+    width: min(600px, 52vw);
   }
 
   .mission-copy {
-    font-size: clamp(23px, 2.4vw, 30px);
+    font-size: clamp(28px, 2.7vw, 35px);
   }
 }
 
@@ -1634,7 +1658,7 @@ button {
   }
 
   .hero-inner {
-    padding-top: 94px;
+    padding-top: 82px;
   }
 
   .hero-overlay {
@@ -1646,6 +1670,10 @@ button {
         rgba(251, 249, 245, 0.40) 78%,
         rgba(251, 249, 245, 0.08) 100%
       );
+  }
+
+  .hero-content {
+    padding-top: 30px;
   }
 }
 
@@ -1670,7 +1698,7 @@ button {
   }
 
   .hero-inner {
-    padding-top: 88px;
+    padding-top: 82px;
     padding-bottom: 65px;
   }
 
@@ -1698,9 +1726,16 @@ button {
     max-width: 580px;
   }
 
+  .mission::before {
+    margin-bottom: 12px;
+
+    font-size: 10px;
+    letter-spacing: 0.13em;
+  }
+
   .mission-copy {
-    font-size: clamp(23px, 6.2vw, 29px);
-    line-height: 1.12;
+    font-size: clamp(25px, 6.8vw, 32px);
+    line-height: 1.1;
   }
 
   .hero-overlay {
