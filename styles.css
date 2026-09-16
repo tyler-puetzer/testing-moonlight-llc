@@ -1369,7 +1369,7 @@ button {
   inset: 0;
   z-index: -3;
 
-  background-image: url("https://images.unsplash.com/photo-1516307365426-bea591f05011?auto=format&fit=crop&w=2400&q=90");
+  background-image: url("media/hero.jpg");
   background-size: cover;
   background-position: center center;
 
@@ -1731,8 +1731,7 @@ button {
   }
 
   *,
-  *::before,
-  *::after {
+  *::before {
     transition-duration: 0.01ms !important;
     animation-duration: 0.01ms !important;
   }
