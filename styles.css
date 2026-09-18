@@ -536,3 +536,335 @@ main > section.hero:first-of-type .hero-image img {
     letter-spacing: .11em;
   }
 }
+
+
+/* =========================================================
+   DIVINE MOONLIGHT — HERO FINAL POLISH
+   ========================================================= */
+
+/* Full-bleed photographic hero with a soft editorial fade into the copy. */
+main > section.hero:first-of-type {
+  position: relative !important;
+  min-height: calc(100svh - 72px) !important;
+  height: calc(100svh - 72px) !important;
+  overflow: hidden !important;
+  background: var(--cream) !important;
+  isolation: isolate !important;
+}
+
+main > section.hero:first-of-type .hero-grid {
+  display: block !important;
+  position: relative !important;
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 100% !important;
+}
+
+main > section.hero:first-of-type .hero-image {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 0 !important;
+  z-index: 0 !important;
+  overflow: hidden !important;
+}
+
+main > section.hero:first-of-type .hero-image img {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center center !important;
+  transform: scale(1.02) !important;
+}
+
+main > section.hero:first-of-type .hero-image::after {
+  content: '' !important;
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 1 !important;
+  pointer-events: none !important;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(247,243,236,.99) 0%,
+      rgba(247,243,236,.96) 22%,
+      rgba(247,243,236,.82) 42%,
+      rgba(247,243,236,.50) 57%,
+      rgba(247,243,236,.16) 72%,
+      rgba(247,243,236,0) 100%
+    ) !important;
+}
+
+/* Copy sits over the photograph rather than occupying a separate column. */
+main > section.hero:first-of-type .hero-copy {
+  position: relative !important;
+  z-index: 2 !important;
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 100% !important;
+  box-sizing: border-box !important;
+  padding: 0 !important;
+  display: block !important;
+  background: transparent !important;
+}
+
+main > section.hero:first-of-type .hero-copy > .container {
+  width: 100% !important;
+  max-width: 1320px !important;
+  height: 100% !important;
+  margin: 0 auto !important;
+  padding: 0 56px !important;
+  box-sizing: border-box !important;
+}
+
+/* The motto is centered against the entire viewport, not the left column. */
+main > section.hero:first-of-type h1 {
+  position: absolute !important;
+  top: 22px !important;
+  left: 0 !important;
+  right: 0 !important;
+  z-index: 4 !important;
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 30px !important;
+  box-sizing: border-box !important;
+  text-align: center !important;
+  color: var(--sage-dark) !important;
+  font-family: var(--display) !important;
+  font-size: clamp(58px, 6vw, 92px) !important;
+  font-weight: 500 !important;
+  line-height: .88 !important;
+  letter-spacing: -.045em !important;
+  white-space: nowrap !important;
+}
+
+/* Service area appears once, beneath the motto, aligned with the left copy. */
+main > section.hero:first-of-type .eyebrow {
+  position: absolute !important;
+  top: 148px !important;
+  left: 56px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  color: var(--burgundy) !important;
+  font-family: var(--sans) !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  letter-spacing: .18em !important;
+  line-height: 1.2 !important;
+  text-transform: uppercase !important;
+}
+
+main > section.hero:first-of-type .eyebrow::before,
+main > section.hero:first-of-type .eyebrow::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* Left-side content has a deliberate rhythm and never collides with the motto. */
+main > section.hero:first-of-type .hero-copy > .container > p {
+  position: absolute !important;
+  top: 205px !important;
+  left: 56px !important;
+  max-width: 560px !important;
+  margin: 0 !important;
+  color: var(--ink) !important;
+  font-family: var(--sans) !important;
+  font-size: 17px !important;
+  line-height: 1.65 !important;
+  text-shadow: 0 1px 12px rgba(247,243,236,.35) !important;
+}
+
+main > section.hero:first-of-type .hero-copy > .container > p::after {
+  content: none !important;
+}
+
+main > section.hero:first-of-type .actions {
+  position: absolute !important;
+  top: 350px !important;
+  left: 56px !important;
+  margin: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 22px !important;
+}
+
+main > section.hero:first-of-type .actions .btn-secondary {
+  display: none !important;
+}
+
+main > section.hero:first-of-type .actions .btn-primary {
+  min-height: 54px !important;
+  padding: 0 29px !important;
+  border-radius: 999px !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  box-shadow: 0 14px 34px rgba(90,24,48,.18) !important;
+}
+
+main > section.hero:first-of-type .actions .btn-primary::after {
+  content: ' →' !important;
+  font-size: 17px !important;
+}
+
+main > section.hero:first-of-type .text-link {
+  position: absolute !important;
+  top: 430px !important;
+  left: 56px !important;
+  display: inline-flex !important;
+  margin: 0 !important;
+  padding-bottom: 5px !important;
+  color: var(--sage-dark) !important;
+  border-bottom: 1px solid rgba(42,79,68,.35) !important;
+  font-family: var(--sans) !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  text-decoration: none !important;
+}
+
+main > section.hero:first-of-type .hero-copy::after {
+  content: 'NURSING POOL   ·   RN · LPN · CNA SUPPORT' !important;
+  position: absolute !important;
+  left: 56px !important;
+  bottom: 38px !important;
+  z-index: 4 !important;
+  padding: 15px 28px 0 0 !important;
+  border-top: 1px solid rgba(42,79,68,.22) !important;
+  color: var(--burgundy) !important;
+  font-family: var(--sans) !important;
+  font-size: 10px !important;
+  font-weight: 700 !important;
+  letter-spacing: .16em !important;
+}
+
+/* Subtle readability veil behind the left copy, while keeping the photo visible. */
+main > section.hero:first-of-type .hero-copy::before {
+  content: '' !important;
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: -1 !important;
+  pointer-events: none !important;
+}
+
+/* Mobile: keep the full photo, but make the copy more legible. */
+@media (max-width: 900px) {
+  main > section.hero:first-of-type h1 {
+    font-size: clamp(52px, 7vw, 76px) !important;
+  }
+
+  main > section.hero:first-of-type .hero-copy > .container {
+    padding: 0 32px !important;
+  }
+
+  main > section.hero:first-of-type .eyebrow,
+  main > section.hero:first-of-type .hero-copy > .container > p,
+  main > section.hero:first-of-type .actions,
+  main > section.hero:first-of-type .text-link {
+    left: 32px !important;
+  }
+
+  main > section.hero:first-of-type .eyebrow {
+    top: 140px !important;
+  }
+
+  main > section.hero:first-of-type .hero-copy > .container > p {
+    top: 192px !important;
+    max-width: 500px !important;
+  }
+
+  main > section.hero:first-of-type .actions {
+    top: 345px !important;
+  }
+
+  main > section.hero:first-of-type .text-link {
+    top: 425px !important;
+  }
+}
+
+@media (max-width: 700px) {
+  main > section.hero:first-of-type {
+    min-height: calc(100svh - 72px) !important;
+    height: calc(100svh - 72px) !important;
+  }
+
+  main > section.hero:first-of-type .hero-copy > .container {
+    padding: 0 20px !important;
+  }
+
+  main > section.hero:first-of-type h1 {
+    top: 20px !important;
+    padding: 0 16px !important;
+    font-size: clamp(42px, 12vw, 62px) !important;
+    white-space: normal !important;
+  }
+
+  main > section.hero:first-of-type .hero-image::after {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(247,243,236,.94) 0%,
+        rgba(247,243,236,.82) 30%,
+        rgba(247,243,236,.62) 58%,
+        rgba(247,243,236,.28) 100%
+      ) !important;
+  }
+
+  main > section.hero:first-of-type .eyebrow {
+    top: 150px !important;
+    left: 20px !important;
+    right: 20px !important;
+    font-size: 10px !important;
+    letter-spacing: .12em !important;
+  }
+
+  main > section.hero:first-of-type .hero-copy > .container > p {
+    top: 195px !important;
+    left: 20px !important;
+    right: 20px !important;
+    max-width: 520px !important;
+    font-size: 16px !important;
+    line-height: 1.55 !important;
+  }
+
+  main > section.hero:first-of-type .actions {
+    top: 335px !important;
+    left: 20px !important;
+  }
+
+  main > section.hero:first-of-type .text-link {
+    top: 415px !important;
+    left: 20px !important;
+  }
+
+  main > section.hero:first-of-type .hero-copy::after {
+    left: 20px !important;
+    bottom: 28px !important;
+    font-size: 9px !important;
+    letter-spacing: .10em !important;
+  }
+}
+
+@media (max-width: 420px) {
+  main > section.hero:first-of-type h1 {
+    top: 18px !important;
+    font-size: clamp(40px, 12vw, 54px) !important;
+  }
+
+  main > section.hero:first-of-type .eyebrow {
+    top: 140px !important;
+  }
+
+  main > section.hero:first-of-type .hero-copy > .container > p {
+    top: 183px !important;
+  }
+
+  main > section.hero:first-of-type .actions {
+    top: 330px !important;
+  }
+
+  main > section.hero:first-of-type .text-link {
+    top: 410px !important;
+  }
+}
