@@ -54,3 +54,42 @@ if (menuToggle && mobileNav) {
     });
   });
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  const elements = document.querySelectorAll(".reveal-mission");
+
+  if (!("IntersectionObserver" in window)) {
+
+    elements.forEach(element => {
+      element.classList.add("visible");
+    });
+
+    return;
+  }
+
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+
+      entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+
+          entry.target.classList.add("visible");
+
+          observer.unobserve(entry.target);
+        }
+
+      });
+
+    },
+    {
+      threshold: 0.15
+    }
+  );
+
+  elements.forEach(element => {
+    observer.observe(element);
+  });
+
+});
