@@ -8,9 +8,7 @@
 
 /* Hide the old experimental hero. The second .hero in index.html
    becomes the single visible homepage hero. */
-main > section.hero:first-of-type {
-  display: none !important;
-}
+/* The homepage now uses the first (and only) hero section. */
 
 main > section.hero:nth-of-type(2) {
   position: relative;
