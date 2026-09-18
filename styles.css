@@ -344,3 +344,197 @@ main > section.hero:nth-of-type(2)::after {
     font-size: 9px;
   }
 }
+
+
+/* =========================================================
+   DIVINE MOONLIGHT — HERO POSITIONING UPDATE
+   ========================================================= */
+
+/* The motto is the first visual element directly beneath the nav
+   and is centered across the full hero. Supporting content remains left. */
+main > section.hero:first-of-type {
+  position: relative;
+  min-height: calc(100svh - 72px);
+  height: calc(100svh - 72px);
+  overflow: hidden;
+  background: var(--cream);
+  isolation: isolate;
+}
+
+main > section.hero:first-of-type .hero-grid {
+  position: relative;
+  min-height: 100%;
+  height: 100%;
+  grid-template-columns: 54% 46%;
+}
+
+main > section.hero:first-of-type .hero-copy {
+  position: relative;
+  z-index: 2;
+  min-height: 100%;
+  padding: 92px 48px 70px;
+  display: flex;
+  align-items: flex-start;
+  background: linear-gradient(90deg,
+    rgba(247,243,236,1) 0%,
+    rgba(247,243,236,.98) 70%,
+    rgba(247,243,236,.86) 100%);
+}
+
+main > section.hero:first-of-type .hero-copy > .container {
+  width: 100%;
+  max-width: 680px;
+  margin: 0;
+}
+
+/* Remove the old "CARE WITH COMPASSION" treatment entirely. */
+main > section.hero:first-of-type .eyebrow::before {
+  content: none;
+  display: none;
+}
+
+main > section.hero:first-of-type .eyebrow {
+  margin: 0;
+  padding: 0;
+}
+
+main > section.hero:first-of-type .eyebrow::after {
+  content: 'Wake · Durham · Orange Counties, NC';
+  display: block;
+  margin: 0;
+  color: var(--sage-dark);
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: .12em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+/* Motto: centered, immediately beneath the navigation. */
+main > section.hero:first-of-type h1 {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  z-index: 5;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0 24px;
+  box-sizing: border-box;
+  text-align: center;
+  color: var(--sage-dark);
+  font-family: var(--display);
+  font-size: clamp(58px, 6.3vw, 92px);
+  font-weight: 500;
+  line-height: .9;
+  letter-spacing: -.045em;
+  pointer-events: none;
+}
+
+/* Supporting content stays left aligned beneath the centered motto. */
+main > section.hero:first-of-type .hero-copy > .container > p {
+  max-width: 570px;
+  margin-top: 25px;
+  color: var(--muted);
+  font-family: var(--sans);
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+main > section.hero:first-of-type .actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-top: 31px;
+}
+
+main > section.hero:first-of-type .actions .btn-secondary {
+  display: none;
+}
+
+main > section.hero:first-of-type .text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 18px;
+  padding-bottom: 4px;
+  color: var(--sage-dark);
+  border-bottom: 1px solid rgba(42,79,68,.3);
+  font-family: var(--sans);
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+main > section.hero:first-of-type .hero-copy::after {
+  content: 'NURSING POOL   ·   RN · LPN · CNA SUPPORT';
+  position: absolute;
+  left: 48px;
+  bottom: 38px;
+  padding-top: 16px;
+  padding-right: 24px;
+  border-top: 1px solid rgba(42,79,68,.18);
+  color: var(--burgundy);
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .14em;
+}
+
+main > section.hero:first-of-type .hero-image {
+  min-height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+main > section.hero:first-of-type .hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 52% center;
+  transform: scale(1.015);
+}
+
+/* Mobile keeps the motto centered but lets supporting content use the full width. */
+@media (max-width: 700px) {
+  main > section.hero:first-of-type {
+    min-height: calc(100svh - 72px);
+    height: auto;
+  }
+
+  main > section.hero:first-of-type .hero-grid {
+    min-height: calc(100svh - 72px);
+    height: auto;
+    display: block;
+  }
+
+  main > section.hero:first-of-type .hero-copy {
+    min-height: calc(100svh - 72px);
+    padding: 82px 16px 105px;
+    background: rgba(247,243,236,.91);
+  }
+
+  main > section.hero:first-of-type h1 {
+    top: 8px;
+    padding: 0 16px;
+    font-size: clamp(46px, 13vw, 68px);
+  }
+
+  main > section.hero:first-of-type .hero-image {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    opacity: .28;
+  }
+
+  main > section.hero:first-of-type .hero-copy::after {
+    left: 16px;
+    right: 16px;
+    bottom: 30px;
+    padding-right: 0;
+    font-size: 10px;
+    letter-spacing: .11em;
+  }
+}
