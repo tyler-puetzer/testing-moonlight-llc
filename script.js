@@ -95,7 +95,23 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!original || !original.includes("media/icons/")) return;
 
     const fileName = original.split("/").pop();
-    const colorSrc = "media/colors/" + fileName;
+
+    /* The uploaded colored artwork uses its own filenames. */
+    const coloredIcons = {
+      "heart-care-icon.svg": "heart-care-colored.svg",
+      "brain-line-icon.svg": "brain-colored.svg",
+      "heartbeat-icon.svg": "heartbeat-colored.svg",
+      "nurse-cap.svg": "nurse-cap-colored.svg",
+      "housekeeping-icon.svg": "housekeeping-colored.svg",
+      "pasta-icon.svg": "pasta-colored.svg",
+      "diary-icon.svg": "diary-colored.svg",
+      "car-icon.svg": "car-colored.svg"
+    };
+
+    const coloredFileName = coloredIcons[fileName];
+    if (!coloredFileName) return;
+
+    const colorSrc = "media/colors/" + coloredFileName;
 
     /* Preload so the hover feels instant. */
     const preload = new Image();
