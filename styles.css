@@ -2658,9 +2658,9 @@ main > section.hero:first-of-type .hero-copy::before {
 
 
 /* =========================================================
-   WHATSAPP — HARD POSITIONING OVERRIDE
-   Keeps the contact control above all page content regardless
-   of legacy link/layout rules.
+   WHATSAPP — SIMPLE FLOATING BUTTON
+   No hover expansion. Gentle attention hop immediately, then
+   approximately every 5 seconds.
    ========================================================= */
 
 a#dm-whatsapp-float.dm-whatsapp-float {
@@ -2696,10 +2696,11 @@ a#dm-whatsapp-float.dm-whatsapp-float {
 
   opacity: 1 !important;
   visibility: visible !important;
-  transform: translate3d(0, 0, 0) !important;
-
   overflow: visible !important;
   cursor: pointer !important;
+
+  box-shadow: 0 10px 24px rgba(20, 70, 45, .24) !important;
+  animation: dm-whatsapp-attention 5s ease-in-out infinite !important;
 }
 
 a#dm-whatsapp-float.dm-whatsapp-float .dm-whatsapp-icon {
@@ -2722,26 +2723,32 @@ a#dm-whatsapp-float.dm-whatsapp-float .dm-whatsapp-icon svg {
 }
 
 a#dm-whatsapp-float.dm-whatsapp-float .dm-whatsapp-label {
-  position: absolute !important;
-  right: 67px !important;
-  top: 50% !important;
-  bottom: auto !important;
-  left: auto !important;
-  width: auto !important;
-  height: auto !important;
-  min-width: max-content !important;
-  transform: translateY(-50%) translateX(8px) !important;
+  display: none !important;
 }
 
+/* Completely disable the old hover expansion. */
 a#dm-whatsapp-float.dm-whatsapp-float:hover,
 a#dm-whatsapp-float.dm-whatsapp-float:focus-visible {
-  width: 66px !important;
-  max-width: 66px !important;
-  transform: translate3d(0, -3px, 0) !important;
+  width: 60px !important;
+  max-width: 60px !important;
+  height: 60px !important;
+  max-height: 60px !important;
+  border-radius: 50% !important;
+  box-shadow: 0 10px 24px rgba(20, 70, 45, .24) !important;
+  animation-play-state: running !important;
+  outline: none !important;
 }
 
 a#dm-whatsapp-float.dm-whatsapp-pending {
   cursor: default !important;
+}
+
+@keyframes dm-whatsapp-attention {
+  0%, 10%, 100% { transform: translateY(0); }
+  2% { transform: translateY(-9px); }
+  4% { transform: translateY(0); }
+  6% { transform: translateY(-5px); }
+  8% { transform: translateY(0); }
 }
 
 @media (max-width: 600px) {
@@ -2756,9 +2763,23 @@ a#dm-whatsapp-float.dm-whatsapp-pending {
     max-height: 56px !important;
   }
 
+  a#dm-whatsapp-float.dm-whatsapp-float:hover,
+  a#dm-whatsapp-float.dm-whatsapp-float:focus-visible {
+    width: 56px !important;
+    max-width: 56px !important;
+    height: 56px !important;
+    max-height: 56px !important;
+  }
+
   a#dm-whatsapp-float.dm-whatsapp-float .dm-whatsapp-icon,
   a#dm-whatsapp-float.dm-whatsapp-float .dm-whatsapp-icon svg {
     width: 29px !important;
     height: 29px !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  a#dm-whatsapp-float.dm-whatsapp-float {
+    animation: none !important;
   }
 }
