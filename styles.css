@@ -2502,3 +2502,31 @@ main > section.hero:first-of-type .hero-copy::before {
 @media (max-width:700px) {
   .service-grid .card:hover,.service-grid .card:focus-within,.founders-feature:hover,.founders-josephine:hover,.home-mission-quote:hover { transform:none; }
 }
+
+
+/* The uploaded SVGs are shape-matched monochrome artwork, so use the
+   brand palette as a color treatment while they are in their active state. */
+.service-grid .card:nth-child(1):hover .icon img,
+.service-grid .card:nth-child(1):focus-within .icon img,
+.service-grid .card:nth-child(5):hover .icon img,
+.service-grid .card:nth-child(5):focus-within .icon img {
+  filter: brightness(0) saturate(100%) invert(25%) sepia(17%) saturate(1190%) hue-rotate(306deg) brightness(89%) contrast(91%);
+}
+.service-grid .card:nth-child(2):hover .icon img,
+.service-grid .card:nth-child(2):focus-within .icon img,
+.service-grid .card:nth-child(6):hover .icon img,
+.service-grid .card:nth-child(6):focus-within .icon img {
+  filter: brightness(0) saturate(100%) invert(31%) sepia(9%) saturate(558%) hue-rotate(62deg) brightness(93%) contrast(88%);
+}
+.service-grid .card:nth-child(3):hover .icon img,
+.service-grid .card:nth-child(3):focus-within .icon img,
+.service-grid .card:nth-child(7):hover .icon img,
+.service-grid .card:nth-child(7):focus-within .icon img {
+  filter: brightness(0) saturate(100%) invert(70%) sepia(19%) saturate(605%) hue-rotate(7deg) brightness(87%) contrast(87%);
+}
+.service-grid .card:nth-child(4):hover .icon img,
+.service-grid .card:nth-child(4):focus-within .icon img,
+.service-grid .card:nth-child(8):hover .icon img,
+.service-grid .card:nth-child(8):focus-within .icon img {
+  filter: brightness(0) saturate(100%) invert(45%) sepia(13%) saturate(650%) hue-rotate(78deg) brightness(92%) contrast(89%);
+}
