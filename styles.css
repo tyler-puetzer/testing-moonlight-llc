@@ -2381,3 +2381,23 @@ main > section.hero:first-of-type .hero-copy::before {
     border-radius: 18px;
   }
 }
+
+
+/* =========================================================
+   SHARED NAVIGATION — STICKY WRAPPER FIX
+   The header is injected inside #shared-site-navigation. The wrapper
+   must be the sticky element so it remains pinned after scrolling.
+   ========================================================= */
+
+#shared-site-navigation {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+}
+
+#shared-site-navigation .header {
+  position: relative;
+  top: auto;
+  z-index: 100;
+}
