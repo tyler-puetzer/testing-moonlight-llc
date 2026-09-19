@@ -2699,7 +2699,7 @@ a#dm-whatsapp-float.dm-whatsapp-float {
   overflow: visible !important;
   cursor: pointer !important;
 
-  box-shadow: 0 10px 24px rgba(20, 70, 45, .24) !important;
+  box-shadow: 0 5px 14px rgba(20, 70, 45, .18) !important;
   animation: dm-whatsapp-attention 5s ease-in-out infinite !important;
 }
 
@@ -2734,7 +2734,7 @@ a#dm-whatsapp-float.dm-whatsapp-float:focus-visible {
   height: 60px !important;
   max-height: 60px !important;
   border-radius: 50% !important;
-  box-shadow: 0 10px 24px rgba(20, 70, 45, .24) !important;
+  box-shadow: 0 5px 14px rgba(20, 70, 45, .18) !important;
   animation-play-state: running !important;
   outline: none !important;
 }
