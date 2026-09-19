@@ -2401,3 +2401,104 @@ main > section.hero:first-of-type .hero-copy::before {
   top: auto;
   z-index: 100;
 }
+
+
+/* =========================================================
+   DIVINE MOONLIGHT — SITE-WIDE INTERACTION POLISH
+   ========================================================= */
+:root { --dm-ease: cubic-bezier(.22, 1, .36, 1); }
+
+.card,.step,.quote-box,.founders-feature,.founders-josephine,.mission-highlight,.mission-link,.learn,.btn,.team-card,.roles .role,.areas li {
+  transition: transform .42s var(--dm-ease), box-shadow .42s var(--dm-ease), border-color .32s ease, background-color .32s ease, color .25s ease;
+}
+
+.service-grid .card {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(42,79,68,.08);
+  box-shadow: 0 10px 30px -24px rgba(42,79,68,.35);
+}
+.service-grid .card::before {
+  content:"";
+  position:absolute;
+  left:0; right:0; top:0; height:2px;
+  background:linear-gradient(90deg,var(--gold),var(--burgundy));
+  transform:scaleX(0);
+  transform-origin:left;
+  transition:transform .42s var(--dm-ease);
+}
+.service-grid .card:hover,.service-grid .card:focus-within {
+  transform:translateY(-7px);
+  border-color:rgba(184,149,74,.25);
+  box-shadow:0 22px 45px -25px rgba(42,79,68,.34);
+}
+.service-grid .card:hover::before,.service-grid .card:focus-within::before { transform:scaleX(1); }
+
+.service-grid .icon { position:relative; display:grid; place-items:center; min-height:74px; margin-bottom:8px; }
+.service-grid .icon img {
+  width:52px; height:52px; object-fit:contain;
+  transition:transform .45s var(--dm-ease),filter .3s ease;
+}
+.service-grid .card:hover .icon img,.service-grid .card:focus-within .icon img { transform:translateY(-3px) scale(1.08); }
+
+.service-grid .learn { display:inline-flex; align-items:center; gap:7px; position:relative; }
+.service-grid .learn::after {
+  content:""; position:absolute; left:0; right:0; bottom:-3px; height:1px;
+  background:var(--gold); transform:scaleX(0); transform-origin:left;
+  transition:transform .3s var(--dm-ease);
+}
+.service-grid .card:hover .learn::after,.service-grid .card:focus-within .learn::after { transform:scaleX(1); }
+
+.hero-image,.founder-image-wrap,.josephine-photo,.two-col > img,.final-bg { overflow:hidden; }
+.hero-image img,.founder-image-wrap img,.josephine-photo img,.two-col > img { transition:transform .9s var(--dm-ease); }
+.hero-image:hover img,.founder-image-wrap:hover img,.josephine-photo:hover img,.two-col:hover > img { transform:scale(1.035); }
+
+.founders-feature:hover,.founders-josephine:hover {
+  transform:translateY(-4px);
+  box-shadow:0 28px 65px -34px rgba(42,79,68,.28);
+}
+.home-mission-quote { transition:transform .45s var(--dm-ease),box-shadow .45s var(--dm-ease); }
+.home-mission-quote:hover { transform:translateY(-4px); box-shadow:0 22px 45px -30px rgba(42,79,68,.24); }
+
+.steps .step { position:relative; }
+.steps .step:hover { transform:translateY(-4px); }
+.steps .step .step-num { transition:color .3s ease,transform .4s var(--dm-ease); }
+.steps .step:hover .step-num { color:var(--burgundy); transform:translateX(3px); }
+
+.btn {
+  transition:transform .25s var(--dm-ease),box-shadow .25s ease,background-color .25s ease,border-color .25s ease,color .25s ease;
+}
+.btn:hover,.btn:focus-visible { transform:translateY(-2px); box-shadow:0 12px 26px -17px rgba(42,79,68,.45); }
+.btn:active { transform:translateY(0); }
+
+.text-link,.mission-link,.learn { transition:gap .3s var(--dm-ease),color .25s ease,border-color .25s ease; }
+.text-link:hover,.mission-link:hover { gap:14px; }
+
+#shared-site-navigation .header {
+  transition:background-color .3s ease,box-shadow .3s ease,border-color .3s ease;
+}
+#shared-site-navigation .header.scrolled { box-shadow:0 12px 32px -24px rgba(42,79,68,.45); }
+
+.dm-reveal {
+  opacity:0;
+  transform:translateY(24px);
+  transition:opacity .72s ease,transform .72s var(--dm-ease);
+}
+.dm-reveal.dm-visible { opacity:1; transform:translateY(0); }
+.dm-reveal.dm-delay-1 { transition-delay:.06s; }
+.dm-reveal.dm-delay-2 { transition-delay:.12s; }
+.dm-reveal.dm-delay-3 { transition-delay:.18s; }
+.dm-reveal.dm-delay-4 { transition-delay:.24s; }
+
+@media (prefers-reduced-motion:reduce) {
+  *,*::before,*::after {
+    scroll-behavior:auto !important;
+    transition-duration:.01ms !important;
+    animation-duration:.01ms !important;
+    animation-iteration-count:1 !important;
+  }
+  .dm-reveal,.reveal,.reveal-mission { opacity:1 !important; transform:none !important; }
+}
+@media (max-width:700px) {
+  .service-grid .card:hover,.service-grid .card:focus-within,.founders-feature:hover,.founders-josephine:hover,.home-mission-quote:hover { transform:none; }
+}
