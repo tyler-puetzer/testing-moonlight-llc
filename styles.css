@@ -1609,3 +1609,145 @@ main > section.hero:first-of-type .hero-copy::before {
   }
 
 }
+
+
+/* =========================================
+   DIVINE MOONLIGHT — FOUNDERS SECTION
+   ========================================= */
+.founders-section {
+  position: relative;
+  overflow: hidden;
+  padding: 120px 0;
+  background: #f7f4ed;
+  color: var(--ink);
+}
+.founders-container { position: relative; z-index: 2; }
+.founders-flag {
+  position: absolute;
+  width: 900px;
+  height: 560px;
+  right: -300px;
+  top: 40px;
+  opacity: .035;
+  background:
+    linear-gradient(0deg, transparent 0 13%, #6b3039 13% 21%, transparent 21% 31%, #6b3039 31% 39%, transparent 39% 49%, #6b3039 49% 57%, transparent 57% 67%, #6b3039 67% 75%, transparent 75%),
+    linear-gradient(90deg, #2f4c67 0 38%, transparent 38%);
+  transform: rotate(-8deg);
+  pointer-events: none;
+}
+.founders-heading {
+  max-width: 760px;
+  margin-bottom: 55px;
+}
+.founders-heading h2 {
+  margin: 10px 0 15px;
+  font-family: var(--display);
+  font-size: clamp(48px, 6vw, 76px);
+  line-height: .95;
+  font-weight: 500;
+  color: var(--sage-dark);
+}
+.founders-heading h2 em {
+  color: var(--burgundy);
+  font-weight: 400;
+}
+.founders-heading p {
+  max-width: 650px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.75;
+}
+.founders-grid {
+  display: grid;
+  grid-template-columns: 1.15fr .85fr;
+  gap: 28px;
+  align-items: stretch;
+}
+.founder-card {
+  position: relative;
+  overflow: hidden;
+  background: rgba(255,255,255,.72);
+  border: 1px solid rgba(42,79,68,.10);
+  box-shadow: 0 18px 50px rgba(42,79,68,.08);
+}
+.founder-primary {
+  display: grid;
+  grid-template-columns: .9fr 1.1fr;
+}
+.founder-photo {
+  min-height: 470px;
+  background: #ddd8ce;
+  overflow: hidden;
+}
+.founder-photo img {
+  width: 100%;
+  height: 100%;
+  min-height: 470px;
+  display: block;
+  object-fit: cover;
+  object-position: center 20%;
+}
+.founder-content {
+  padding: 48px 45px;
+}
+.founder-role {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--burgundy);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .17em;
+  text-transform: uppercase;
+}
+.founder-card h3 {
+  margin: 0 0 20px;
+  color: var(--sage-dark);
+  font-family: var(--display);
+  font-size: 48px;
+  line-height: .95;
+  font-weight: 500;
+}
+.founder-card p {
+  margin: 0 0 18px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.8;
+}
+.founder-secondary {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: var(--sage-dark);
+}
+.founder-secondary .founder-content { padding: 55px 48px 30px; }
+.founder-secondary .founder-role { color: #d4bd82; }
+.founder-secondary h3,
+.founder-secondary p { color: #fff; }
+.founder-secondary p { opacity: .84; }
+.founder-signature {
+  margin: auto 48px 48px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255,255,255,.22);
+  color: #d4bd82;
+  font-family: var(--display);
+  font-size: 27px;
+  font-style: italic;
+}
+.founders-footer {
+  margin-top: 35px;
+  text-align: center;
+}
+@media (max-width: 900px) {
+  .founders-section { padding: 90px 0; }
+  .founders-grid { grid-template-columns: 1fr; }
+  .founder-primary { grid-template-columns: 1fr; }
+  .founder-photo, .founder-photo img { min-height: 380px; }
+}
+@media (max-width: 600px) {
+  .founders-section { padding: 75px 0; }
+  .founders-heading { margin-bottom: 35px; }
+  .founder-content { padding: 35px 28px !important; }
+  .founder-card h3 { font-size: 42px; }
+  .founder-signature { margin: auto 28px 35px; }
+}
