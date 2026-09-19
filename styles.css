@@ -1614,92 +1614,322 @@ main > section.hero:first-of-type .hero-copy::before {
 
 /* =========================================
    DIVINE MOONLIGHT — FOUNDERS SECTION
-   Self-contained styles
    ========================================= */
+
 .founders-section {
   position: relative;
   overflow: hidden;
-  padding: 120px 0 110px;
+  padding: 115px 0 105px;
   background: #f7f3ec;
   color: #2f302c;
 }
+
 .founders-section,
-.founders-section * { box-sizing: border-box; }
-.founders-inner { position: relative; z-index: 2; }
-.founders-background { position:absolute; inset:0; pointer-events:none; overflow:hidden; opacity:.08; }
-.flag-star { position:absolute; width:420px; height:300px; right:-70px; top:20px; background:#27455d; border-radius:0 0 100% 0; clip-path:polygon(0 0,100% 0,100% 100%,0 0); opacity:.18; }
-.flag-stripe { position:absolute; right:-120px; width:760px; height:16px; background:#6b3039; transform:rotate(-12deg); }
-.stripe-one{top:110px}.stripe-two{top:180px}.stripe-three{top:250px}
-.founders-intro { max-width:760px; margin-bottom:60px; }
-.founders-kicker,.founder-role {
-  display:block; color:#6b3039; font:700 11px/1.2 Arial,sans-serif;
-  letter-spacing:.18em; text-transform:uppercase;
+.founders-section * {
+  box-sizing: border-box;
 }
+
+.founders-inner {
+  position: relative;
+  z-index: 2;
+}
+
+.founders-background {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  opacity: .06;
+}
+
+.flag-star {
+  position: absolute;
+  width: 420px;
+  height: 300px;
+  right: -70px;
+  top: 20px;
+  background: #27455d;
+  border-radius: 0 0 100% 0;
+  clip-path: polygon(0 0,100% 0,100% 100%,0 0);
+}
+
+.flag-stripe {
+  position: absolute;
+  right: -120px;
+  width: 760px;
+  height: 16px;
+  background: #6b3039;
+  transform: rotate(-12deg);
+}
+
+.stripe-one { top: 110px; }
+.stripe-two { top: 180px; }
+.stripe-three { top: 250px; }
+
+.founders-intro {
+  max-width: 760px;
+  margin-bottom: 55px;
+}
+
+.founders-kicker,
+.founder-role {
+  display: block;
+  color: #6b3039;
+  font: 700 11px/1.2 Arial, sans-serif;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+}
+
 .founders-intro h2 {
-  margin:12px 0 18px; color:#4d594b;
-  font-family:"Cormorant Garamond",Georgia,serif;
-  font-size:clamp(54px,7vw,88px); line-height:.88; font-weight:500; letter-spacing:-.03em;
+  margin: 12px 0 18px;
+  color: #4d594b;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(54px, 7vw, 88px);
+  line-height: .88;
+  font-weight: 500;
+  letter-spacing: -.03em;
 }
-.founders-intro h2 em,.founder-story h3 em,.josephine-copy h3 em { color:#6b3039; font-weight:400; }
-.founders-intro p { max-width:690px; margin:0; color:#73756d; font:400 16px/1.8 "Outfit",Arial,sans-serif; }
+
+.founders-intro h2 em {
+  color: #6b3039;
+  font-weight: 400;
+}
+
+.founders-intro p {
+  max-width: 690px;
+  margin: 0;
+  color: #73756d;
+  font: 400 16px/1.8 "Outfit", Arial, sans-serif;
+}
 
 .founders-feature {
-  display:grid; grid-template-columns:minmax(300px,.9fr) minmax(360px,1.1fr);
-  min-height:610px; background:#fff; box-shadow:0 24px 70px rgba(42,79,68,.12);
+  display: grid;
+  grid-template-columns: minmax(300px,.9fr) minmax(360px,1.1fr);
+  min-height: 610px;
+  background: #fff;
+  box-shadow: 0 24px 70px rgba(42,79,68,.10);
 }
-.founder-image-wrap { position:relative; min-height:610px; overflow:hidden; background:#d9d4ca; }
-.founder-image-wrap img { display:block; width:100%; height:100%; min-height:610px; object-fit:cover; object-position:center 18%; }
-.founder-image-wrap:after { content:""; position:absolute; inset:45% 0 0; background:linear-gradient(transparent,rgba(20,30,25,.72)); }
-.founder-image-label { position:absolute; z-index:2; left:34px; right:25px; bottom:30px; color:#fff; }
-.founder-image-label span { display:block; font:700 10px/1 Arial,sans-serif; letter-spacing:.18em; text-transform:uppercase; margin-bottom:8px; opacity:.85; }
-.founder-image-label strong { font:500 43px/.9 "Cormorant Garamond",Georgia,serif; }
 
-.founder-story { padding:72px 70px; display:flex; flex-direction:column; justify-content:center; }
-.founder-number { display:block; color:#b4975a; font:400 20px/1 "Cormorant Garamond",Georgia,serif; margin-bottom:20px; }
-.founder-story .founder-role,.josephine-copy .founder-role { margin-bottom:18px; }
-.founder-story h3,.josephine-copy h3 {
-  margin:0 0 25px; color:#4d594b;
-  font:500 clamp(43px,4.5vw,64px)/.92 "Cormorant Garamond",Georgia,serif; letter-spacing:-.02em;
+.founder-image-wrap {
+  position: relative;
+  min-height: 610px;
+  overflow: hidden;
+  background: #d9d4ca;
 }
-.founder-story p,.josephine-copy p { margin:0 0 18px; color:#73756d; font:400 15.5px/1.8 "Outfit",Arial,sans-serif; }
-.founder-rule { width:55px; height:2px; background:#b4975a; margin:12px 0 22px; }
-.founder-quote { color:#4d594b !important; font-family:"Cormorant Garamond",Georgia,serif !important; font-size:24px !important; line-height:1.3 !important; }
 
+.founder-image-wrap img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 610px;
+  object-fit: cover;
+  object-position: center 18%;
+}
+
+.founder-image-wrap:after {
+  content: "";
+  position: absolute;
+  inset: 45% 0 0;
+  background: linear-gradient(transparent, rgba(20,30,25,.72));
+}
+
+.founder-image-label {
+  position: absolute;
+  z-index: 2;
+  left: 34px;
+  right: 25px;
+  bottom: 30px;
+  color: #fff;
+}
+
+.founder-image-label span {
+  display: block;
+  font: 700 10px/1 Arial, sans-serif;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  opacity: .85;
+}
+
+.founder-image-label strong {
+  font: 500 43px/.9 "Cormorant Garamond", Georgia, serif;
+}
+
+.founder-story {
+  padding: 72px 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.founder-number {
+  display: block;
+  color: #b4975a;
+  font: 400 20px/1 "Cormorant Garamond", Georgia, serif;
+  margin-bottom: 20px;
+}
+
+.founder-story .founder-role {
+  margin-bottom: 18px;
+}
+
+.founder-story h3,
+.josephine-copy h3 {
+  margin: 0 0 25px;
+  color: #4d594b;
+  font: 500 clamp(43px,4.5vw,64px)/.92 "Cormorant Garamond", Georgia, serif;
+  letter-spacing: -.02em;
+}
+
+.founder-story h3 em,
+.josephine-copy h3 em {
+  color: #6b3039;
+  font-weight: 400;
+}
+
+.founder-story p,
+.josephine-copy p {
+  margin: 0 0 18px;
+  color: #73756d;
+  font: 400 15.5px/1.8 "Outfit", Arial, sans-serif;
+}
+
+.founder-rule {
+  width: 55px;
+  height: 2px;
+  background: #b4975a;
+  margin: 12px 0 22px;
+}
+
+.founder-quote {
+  color: #4d594b !important;
+  font-family: "Cormorant Garamond", Georgia, serif !important;
+  font-size: 24px !important;
+  line-height: 1.3 !important;
+}
+
+/* Josephine is presented as the visionary, with a cleaner editorial layout. */
 .founders-josephine {
-  display:grid; grid-template-columns:1fr 1fr; margin-top:30px; min-height:390px;
-  background:#4d594b; color:#fff;
+  display: grid;
+  grid-template-columns: minmax(320px,.85fr) minmax(360px,1.15fr);
+  min-height: 500px;
+  margin-top: 32px;
+  background: #fff;
+  border-top: 1px solid rgba(180,151,90,.35);
+  box-shadow: 0 20px 55px rgba(42,79,68,.08);
 }
-.josephine-copy { padding:58px 65px; display:flex; flex-direction:column; justify-content:center; }
-.josephine-copy .founder-number { color:#d4bd82; }
-.josephine-copy .founder-role { color:#d4bd82; }
-.josephine-copy h3 { color:#fff; }
-.josephine-copy p { color:rgba(255,255,255,.82); }
-.josephine-photo { position:relative; min-height:390px; overflow:hidden; background:linear-gradient(145deg,#6b3039,#303d34); }
-.josephine-photo img { display:block; width:100%; height:100%; object-fit:cover; }
-.josephine-placeholder { position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; color:#fff; font:500 40px/.9 "Cormorant Garamond",Georgia,serif; }
-.josephine-placeholder span { margin-top:14px; color:#d4bd82; font:italic 18px/1 "Cormorant Garamond",Georgia,serif; }
 
-.founders-closing { padding-top:60px; text-align:center; }
-.closing-line { width:70px; height:1px; margin:0 auto 20px; background:#b4975a; }
-.founders-closing p { margin:0 0 25px; color:#4d594b; font:italic 32px/1 "Cormorant Garamond",Georgia,serif; }
+.josephine-photo {
+  position: relative;
+  min-height: 500px;
+  overflow: hidden;
+  background: #e7e1d6;
+}
+
+.josephine-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 500px;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.josephine-placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #687563;
+  background: #e7e1d6;
+  font: 500 42px/1 "Cormorant Garamond", Georgia, serif;
+}
+
+.josephine-copy {
+  padding: 70px 75px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.josephine-copy .founder-number {
+  color: #b4975a;
+}
+
+.josephine-copy .founder-role {
+  margin-bottom: 18px;
+}
+
+.josephine-copy h3 {
+  font-size: clamp(44px,4.3vw,62px);
+}
+
+.founders-closing {
+  display: none;
+}
 
 @media (max-width:850px) {
-  .founders-section { padding:85px 0; }
-  .founders-feature,.founders-josephine { grid-template-columns:1fr; }
-  .founder-image-wrap,.founder-image-wrap img { min-height:470px; }
-  .founder-story { padding:52px 38px; }
-  .josephine-photo { order:-1; min-height:330px; }
-}
-@media (max-width:600px) {
-  .founders-intro { margin-bottom:38px; }
-  .founders-intro h2 { font-size:56px; }
-  .founder-image-wrap,.founder-image-wrap img { min-height:400px; }
-  .founder-story { padding:42px 25px; }
-  .founder-story h3,.josephine-copy h3 { font-size:44px; }
-  .josephine-copy { padding:45px 25px; }
-  .founders-closing { padding-top:42px; }
+  .founders-section {
+    padding: 85px 0;
+  }
+
+  .founders-feature,
+  .founders-josephine {
+    grid-template-columns: 1fr;
+  }
+
+  .founder-image-wrap,
+  .founder-image-wrap img {
+    min-height: 470px;
+  }
+
+  .founder-story {
+    padding: 52px 38px;
+  }
+
+  .josephine-photo,
+  .josephine-photo img {
+    min-height: 420px;
+  }
+
+  .josephine-copy {
+    padding: 52px 38px;
+  }
 }
 
+@media (max-width:600px) {
+  .founders-intro {
+    margin-bottom: 38px;
+  }
+
+  .founders-intro h2 {
+    font-size: 56px;
+  }
+
+  .founder-image-wrap,
+  .founder-image-wrap img {
+    min-height: 400px;
+  }
+
+  .founder-story {
+    padding: 42px 25px;
+  }
+
+  .founder-story h3,
+  .josephine-copy h3 {
+    font-size: 44px;
+  }
+
+  .josephine-photo,
+  .josephine-photo img {
+    min-height: 340px;
+  }
+
+  .josephine-copy {
+    padding: 45px 25px;
+  }
+}
 
 /* =========================================================
    HOMEPAGE MISSION — REFINED
