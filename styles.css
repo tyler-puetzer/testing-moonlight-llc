@@ -2228,12 +2228,12 @@ main > section.hero:first-of-type .hero-copy::before {
 #shared-site-navigation .desktop-nav a::after {
   content: '';
   position: absolute;
-  left: 11px;
-  right: 11px;
+  left: 50%;
+  width: calc(100% - 22px);
   bottom: 5px;
   height: 1px;
   background: var(--gold);
-  transform: scaleX(0);
+  transform: translateX(-50%) scaleX(0);
   transform-origin: center;
   transition: transform .25s ease;
 }
@@ -2245,7 +2245,7 @@ main > section.hero:first-of-type .hero-copy::before {
 
 #shared-site-navigation .desktop-nav a:hover::after,
 #shared-site-navigation .desktop-nav a.active::after {
-  transform: scaleX(1);
+  transform: translateX(-50%) scaleX(1);
 }
 
 #shared-site-navigation .btn-primary {
@@ -2333,8 +2333,7 @@ main > section.hero:first-of-type .hero-copy::before {
   }
 
   #shared-site-navigation .desktop-nav a::after {
-    left: 7px;
-    right: 7px;
+    width: calc(100% - 14px);
   }
 
   #shared-site-navigation .navrow {
