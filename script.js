@@ -78,3 +78,104 @@ document.addEventListener("DOMContentLoaded", () => {
 
   elements.forEach(element => observer.observe(element));
 });
+
+
+/* =========================================================
+   DIVINE MOONLIGHT — INTERACTION ENGINE
+   Handles colored service icons and gentle scroll reveals.
+   ========================================================= */
+
+document.addEventListener("DOMContentLoaded", () => {
+  /* Swap each monochrome service icon for its matching color icon on hover. */
+  document.querySelectorAll(".service-grid .card").forEach(card => {
+    const icon = card.querySelector(".icon img");
+    if (!icon) return;
+
+    const original = icon.getAttribute("src");
+    if (!original || !original.includes("media/icons/")) return;
+
+    const fileName = original.split("/").pop();
+    const colorSrc = "media/colors/" + fileName;
+
+    /* Preload so the hover feels instant. */
+    const preload = new Image();
+    preload.src = colorSrc;
+
+    const restore = () => {
+      if (!card.matches(":hover") && document.activeElement !== card) {
+        icon.src = original;
+      }
+    };
+
+    card.addEventListener("mouseenter", () => {
+      icon.src = colorSrc;
+    });
+
+    card.addEventListener("mouseleave", restore);
+    card.addEventListener("focusin", () => {
+      icon.src = colorSrc;
+    });
+    card.addEventListener("focusout", restore);
+  });
+
+  /* Add a restrained reveal animation to common content blocks. */
+  const revealSelectors = [
+    ".section-head",
+    ".service-grid .card",
+    ".steps .step",
+    ".quote-box",
+    ".founders-intro",
+    ".founders-feature",
+    ".founders-josephine",
+    ".two-col",
+    ".split-dark",
+    ".roles .role",
+    ".areas li",
+    ".mission-section-heading",
+    ".mission-statement",
+    ".mission-highlight",
+    ".mission-professional",
+    ".mission-closing",
+    ".mission-final"
+  ];
+
+  const revealItems = [];
+  revealSelectors.forEach(selector => {
+    document.querySelectorAll(selector).forEach(element => {
+      if (!element.classList.contains("reveal-mission") && !element.classList.contains("dm-reveal")) {
+        element.classList.add("dm-reveal");
+        revealItems.push(element);
+      }
+    });
+  });
+
+  if (!("IntersectionObserver" in window)) {
+    revealItems.forEach(element => element.classList.add("dm-visible"));
+    return;
+  }
+
+  const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add("dm-visible");
+      observer.unobserve(entry.target);
+    });
+  }, {
+    threshold: 0.12,
+    rootMargin: "0px 0px -45px 0px"
+  });
+
+  revealItems.forEach((element, index) => {
+    const group = element.closest(".service-grid, .steps, .home-mission-inner");
+    if (group) {
+      const siblings = Array.from(group.children).filter(child =>
+        child.classList.contains("dm-reveal")
+      );
+      const position = siblings.indexOf(element);
+      if (position >= 0 && position < 4) {
+        element.classList.add("dm-delay-" + (position + 1));
+      }
+    }
+    revealObserver.observe(element);
+  });
+});
