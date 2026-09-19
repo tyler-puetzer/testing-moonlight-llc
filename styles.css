@@ -2507,3 +2507,151 @@ main > section.hero:first-of-type .hero-copy::before {
 /* The uploaded SVGs are shape-matched monochrome artwork, so use the
    brand palette as a color treatment while they are in their active state. */
 }
+
+
+/* =========================================================
+   DIVINE MOONLIGHT — FLOATING WHATSAPP BUTTON
+   ========================================================= */
+
+.dm-whatsapp-float {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 9999;
+  width: 60px;
+  height: 60px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #25D366;
+  color: #fff;
+  text-decoration: none;
+  box-shadow: 0 14px 30px rgba(20, 70, 45, .24);
+  transition: transform .28s var(--dm-ease), box-shadow .28s ease, width .35s var(--dm-ease), border-radius .35s var(--dm-ease);
+  animation: dm-whatsapp-bounce 4.8s ease-in-out infinite;
+}
+
+.dm-whatsapp-icon {
+  width: 31px;
+  height: 31px;
+  display: grid;
+  place-items: center;
+}
+
+.dm-whatsapp-icon svg {
+  width: 100%;
+  height: 100%;
+  fill: currentColor;
+}
+
+.dm-whatsapp-label {
+  position: absolute;
+  right: 67px;
+  top: 50%;
+  transform: translateY(-50%) translateX(8px);
+  padding: 9px 13px;
+  border-radius: 8px;
+  background: var(--sage-dark);
+  color: #fff;
+  font: 600 11px/1 var(--sans);
+  letter-spacing: .05em;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .25s ease, transform .3s var(--dm-ease);
+  box-shadow: 0 8px 22px rgba(42,79,68,.18);
+}
+
+.dm-whatsapp-label::after {
+  content: "";
+  position: absolute;
+  right: -5px;
+  top: 50%;
+  width: 10px;
+  height: 10px;
+  background: var(--sage-dark);
+  transform: translateY(-50%) rotate(45deg);
+  border-radius: 1px;
+}
+
+.dm-whatsapp-float:hover,
+.dm-whatsapp-float:focus-visible {
+  width: 66px;
+  transform: translateY(-3px);
+  box-shadow: 0 18px 34px rgba(20, 70, 45, .30);
+  animation-play-state: paused;
+  outline: none;
+}
+
+.dm-whatsapp-float:hover .dm-whatsapp-label,
+.dm-whatsapp-float:focus-visible .dm-whatsapp-label {
+  opacity: 1;
+  transform: translateY(-50%) translateX(0);
+}
+
+.dm-whatsapp-pending {
+  cursor: default;
+  opacity: .88;
+}
+
+.dm-whatsapp-pending:hover,
+.dm-whatsapp-pending:focus-visible {
+  width: 60px;
+  transform: none;
+  box-shadow: 0 14px 30px rgba(20, 70, 45, .24);
+}
+
+.dm-whatsapp-pending .dm-whatsapp-label::before {
+  content: "Number needed";
+}
+
+.dm-whatsapp-pending .dm-whatsapp-label {
+  font-size: 0;
+}
+
+.dm-whatsapp-pending:hover .dm-whatsapp-label,
+.dm-whatsapp-pending:focus-visible .dm-whatsapp-label {
+  opacity: 1;
+  transform: translateY(-50%) translateX(0);
+}
+
+@keyframes dm-whatsapp-bounce {
+  0%, 72%, 100% { transform: translateY(0); }
+  76% { transform: translateY(-7px); }
+  80% { transform: translateY(0); }
+  84% { transform: translateY(-4px); }
+  88% { transform: translateY(0); }
+}
+
+@media (max-width: 600px) {
+  .dm-whatsapp-float {
+    right: 16px;
+    bottom: 16px;
+    width: 56px;
+    height: 56px;
+  }
+
+  .dm-whatsapp-icon {
+    width: 29px;
+    height: 29px;
+  }
+
+  .dm-whatsapp-label {
+    display: none;
+  }
+
+  .dm-whatsapp-float:hover,
+  .dm-whatsapp-float:focus-visible,
+  .dm-whatsapp-pending:hover,
+  .dm-whatsapp-pending:focus-visible {
+    width: 56px;
+    transform: translateY(-2px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dm-whatsapp-float {
+    animation: none;
+  }
+}
