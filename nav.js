@@ -15,8 +15,9 @@
         <nav aria-label="Primary" class="desktop-nav">
           <a data-nav="home" href="index.html">Home</a>
           <a data-nav="services" href="services.html">Services</a>
-          <a data-nav="about" href="about.html">About</a>
+          <a data-nav="about" href="about.html">About Us</a>
           <a data-nav="team" href="team.html">Our Team</a>
+          <a data-nav="service-areas" href="service-areas.html">Service Areas</a>
           <a data-nav="careers" href="careers.html">Careers</a>
           <a data-nav="contact" href="contact.html">Contact</a>
         </nav>
@@ -29,11 +30,13 @@
         <nav aria-label="Mobile">
           <a data-nav="home" href="index.html">Home</a>
           <a data-nav="services" href="services.html">Services</a>
-          <a data-nav="about" href="about.html">About</a>
+          <a data-nav="about" href="about.html">About Us</a>
           <a data-nav="team" href="team.html">Our Team</a>
+          <a data-nav="service-areas" href="service-areas.html">Service Areas</a>
           <a data-nav="careers" href="careers.html">Careers</a>
           <a data-nav="contact" href="contact.html">Contact</a>
           <a class="btn btn-primary" href="appointments.html">Request Care</a>
+          <a class="btn btn-secondary nav-inquiry" href="inquiry.html">General Inquiry</a>
         </nav>
       </div>
     </header>
@@ -60,6 +63,7 @@
       "services.html": "services",
       "about.html": "about",
       "team.html": "team",
+      "service-areas.html": "service-areas",
       "careers.html": "careers",
       "contact.html": "contact"
     };
