@@ -2204,7 +2204,7 @@ main > section.hero:first-of-type .hero-copy::before {
 
 #shared-site-navigation .brand img {
   width: auto;
-  height: 58px;
+  height: 68px;
   object-fit: contain;
 }
 
@@ -2370,7 +2370,7 @@ main > section.hero:first-of-type .hero-copy::before {
   }
 
   #shared-site-navigation .brand img {
-    height: 52px;
+    height: 58px;
   }
 
   #shared-site-navigation .navrow > div:last-child > .btn-primary {
