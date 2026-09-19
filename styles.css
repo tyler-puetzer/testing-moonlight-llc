@@ -1611,143 +1611,91 @@ main > section.hero:first-of-type .hero-copy::before {
 }
 
 
+
 /* =========================================
    DIVINE MOONLIGHT — FOUNDERS SECTION
+   Self-contained styles
    ========================================= */
 .founders-section {
   position: relative;
   overflow: hidden;
-  padding: 120px 0;
-  background: #f7f4ed;
-  color: var(--ink);
+  padding: 120px 0 110px;
+  background: #f7f3ec;
+  color: #2f302c;
 }
-.founders-container { position: relative; z-index: 2; }
-.founders-flag {
-  position: absolute;
-  width: 900px;
-  height: 560px;
-  right: -300px;
-  top: 40px;
-  opacity: .035;
-  background:
-    linear-gradient(0deg, transparent 0 13%, #6b3039 13% 21%, transparent 21% 31%, #6b3039 31% 39%, transparent 39% 49%, #6b3039 49% 57%, transparent 57% 67%, #6b3039 67% 75%, transparent 75%),
-    linear-gradient(90deg, #2f4c67 0 38%, transparent 38%);
-  transform: rotate(-8deg);
-  pointer-events: none;
+.founders-section,
+.founders-section * { box-sizing: border-box; }
+.founders-inner { position: relative; z-index: 2; }
+.founders-background { position:absolute; inset:0; pointer-events:none; overflow:hidden; opacity:.08; }
+.flag-star { position:absolute; width:420px; height:300px; right:-70px; top:20px; background:#27455d; border-radius:0 0 100% 0; clip-path:polygon(0 0,100% 0,100% 100%,0 0); opacity:.18; }
+.flag-stripe { position:absolute; right:-120px; width:760px; height:16px; background:#6b3039; transform:rotate(-12deg); }
+.stripe-one{top:110px}.stripe-two{top:180px}.stripe-three{top:250px}
+.founders-intro { max-width:760px; margin-bottom:60px; }
+.founders-kicker,.founder-role {
+  display:block; color:#6b3039; font:700 11px/1.2 Arial,sans-serif;
+  letter-spacing:.18em; text-transform:uppercase;
 }
-.founders-heading {
-  max-width: 760px;
-  margin-bottom: 55px;
+.founders-intro h2 {
+  margin:12px 0 18px; color:#4d594b;
+  font-family:"Cormorant Garamond",Georgia,serif;
+  font-size:clamp(54px,7vw,88px); line-height:.88; font-weight:500; letter-spacing:-.03em;
 }
-.founders-heading h2 {
-  margin: 10px 0 15px;
-  font-family: var(--display);
-  font-size: clamp(48px, 6vw, 76px);
-  line-height: .95;
-  font-weight: 500;
-  color: var(--sage-dark);
+.founders-intro h2 em,.founder-story h3 em,.josephine-copy h3 em { color:#6b3039; font-weight:400; }
+.founders-intro p { max-width:690px; margin:0; color:#73756d; font:400 16px/1.8 "Outfit",Arial,sans-serif; }
+
+.founders-feature {
+  display:grid; grid-template-columns:minmax(300px,.9fr) minmax(360px,1.1fr);
+  min-height:610px; background:#fff; box-shadow:0 24px 70px rgba(42,79,68,.12);
 }
-.founders-heading h2 em {
-  color: var(--burgundy);
-  font-weight: 400;
+.founder-image-wrap { position:relative; min-height:610px; overflow:hidden; background:#d9d4ca; }
+.founder-image-wrap img { display:block; width:100%; height:100%; min-height:610px; object-fit:cover; object-position:center 18%; }
+.founder-image-wrap:after { content:""; position:absolute; inset:45% 0 0; background:linear-gradient(transparent,rgba(20,30,25,.72)); }
+.founder-image-label { position:absolute; z-index:2; left:34px; right:25px; bottom:30px; color:#fff; }
+.founder-image-label span { display:block; font:700 10px/1 Arial,sans-serif; letter-spacing:.18em; text-transform:uppercase; margin-bottom:8px; opacity:.85; }
+.founder-image-label strong { font:500 43px/.9 "Cormorant Garamond",Georgia,serif; }
+
+.founder-story { padding:72px 70px; display:flex; flex-direction:column; justify-content:center; }
+.founder-number { display:block; color:#b4975a; font:400 20px/1 "Cormorant Garamond",Georgia,serif; margin-bottom:20px; }
+.founder-story .founder-role,.josephine-copy .founder-role { margin-bottom:18px; }
+.founder-story h3,.josephine-copy h3 {
+  margin:0 0 25px; color:#4d594b;
+  font:500 clamp(43px,4.5vw,64px)/.92 "Cormorant Garamond",Georgia,serif; letter-spacing:-.02em;
 }
-.founders-heading p {
-  max-width: 650px;
-  margin: 0;
-  color: var(--muted);
-  font-size: 17px;
-  line-height: 1.75;
+.founder-story p,.josephine-copy p { margin:0 0 18px; color:#73756d; font:400 15.5px/1.8 "Outfit",Arial,sans-serif; }
+.founder-rule { width:55px; height:2px; background:#b4975a; margin:12px 0 22px; }
+.founder-quote { color:#4d594b !important; font-family:"Cormorant Garamond",Georgia,serif !important; font-size:24px !important; line-height:1.3 !important; }
+
+.founders-josephine {
+  display:grid; grid-template-columns:1fr 1fr; margin-top:30px; min-height:390px;
+  background:#4d594b; color:#fff;
 }
-.founders-grid {
-  display: grid;
-  grid-template-columns: 1.15fr .85fr;
-  gap: 28px;
-  align-items: stretch;
+.josephine-copy { padding:58px 65px; display:flex; flex-direction:column; justify-content:center; }
+.josephine-copy .founder-number { color:#d4bd82; }
+.josephine-copy .founder-role { color:#d4bd82; }
+.josephine-copy h3 { color:#fff; }
+.josephine-copy p { color:rgba(255,255,255,.82); }
+.josephine-photo { position:relative; min-height:390px; overflow:hidden; background:linear-gradient(145deg,#6b3039,#303d34); }
+.josephine-photo img { display:block; width:100%; height:100%; object-fit:cover; }
+.josephine-placeholder { position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; color:#fff; font:500 40px/.9 "Cormorant Garamond",Georgia,serif; }
+.josephine-placeholder span { margin-top:14px; color:#d4bd82; font:italic 18px/1 "Cormorant Garamond",Georgia,serif; }
+
+.founders-closing { padding-top:60px; text-align:center; }
+.closing-line { width:70px; height:1px; margin:0 auto 20px; background:#b4975a; }
+.founders-closing p { margin:0 0 25px; color:#4d594b; font:italic 32px/1 "Cormorant Garamond",Georgia,serif; }
+
+@media (max-width:850px) {
+  .founders-section { padding:85px 0; }
+  .founders-feature,.founders-josephine { grid-template-columns:1fr; }
+  .founder-image-wrap,.founder-image-wrap img { min-height:470px; }
+  .founder-story { padding:52px 38px; }
+  .josephine-photo { order:-1; min-height:330px; }
 }
-.founder-card {
-  position: relative;
-  overflow: hidden;
-  background: rgba(255,255,255,.72);
-  border: 1px solid rgba(42,79,68,.10);
-  box-shadow: 0 18px 50px rgba(42,79,68,.08);
-}
-.founder-primary {
-  display: grid;
-  grid-template-columns: .9fr 1.1fr;
-}
-.founder-photo {
-  min-height: 470px;
-  background: #ddd8ce;
-  overflow: hidden;
-}
-.founder-photo img {
-  width: 100%;
-  height: 100%;
-  min-height: 470px;
-  display: block;
-  object-fit: cover;
-  object-position: center 20%;
-}
-.founder-content {
-  padding: 48px 45px;
-}
-.founder-role {
-  display: block;
-  margin-bottom: 10px;
-  color: var(--burgundy);
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: .17em;
-  text-transform: uppercase;
-}
-.founder-card h3 {
-  margin: 0 0 20px;
-  color: var(--sage-dark);
-  font-family: var(--display);
-  font-size: 48px;
-  line-height: .95;
-  font-weight: 500;
-}
-.founder-card p {
-  margin: 0 0 18px;
-  color: var(--muted);
-  font-size: 15px;
-  line-height: 1.8;
-}
-.founder-secondary {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background: var(--sage-dark);
-}
-.founder-secondary .founder-content { padding: 55px 48px 30px; }
-.founder-secondary .founder-role { color: #d4bd82; }
-.founder-secondary h3,
-.founder-secondary p { color: #fff; }
-.founder-secondary p { opacity: .84; }
-.founder-signature {
-  margin: auto 48px 48px;
-  padding-top: 24px;
-  border-top: 1px solid rgba(255,255,255,.22);
-  color: #d4bd82;
-  font-family: var(--display);
-  font-size: 27px;
-  font-style: italic;
-}
-.founders-footer {
-  margin-top: 35px;
-  text-align: center;
-}
-@media (max-width: 900px) {
-  .founders-section { padding: 90px 0; }
-  .founders-grid { grid-template-columns: 1fr; }
-  .founder-primary { grid-template-columns: 1fr; }
-  .founder-photo, .founder-photo img { min-height: 380px; }
-}
-@media (max-width: 600px) {
-  .founders-section { padding: 75px 0; }
-  .founders-heading { margin-bottom: 35px; }
-  .founder-content { padding: 35px 28px !important; }
-  .founder-card h3 { font-size: 42px; }
-  .founder-signature { margin: auto 28px 35px; }
+@media (max-width:600px) {
+  .founders-intro { margin-bottom:38px; }
+  .founders-intro h2 { font-size:56px; }
+  .founder-image-wrap,.founder-image-wrap img { min-height:400px; }
+  .founder-story { padding:42px 25px; }
+  .founder-story h3,.josephine-copy h3 { font-size:44px; }
+  .josephine-copy { padding:45px 25px; }
+  .founders-closing { padding-top:42px; }
 }
