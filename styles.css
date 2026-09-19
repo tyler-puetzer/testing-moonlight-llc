@@ -2180,3 +2180,205 @@ main > section.hero:first-of-type .hero-copy::before {
     transition: none;
   }
 }
+
+
+/* =========================================================
+   DIVINE MOONLIGHT — SHARED NAV + FOUNDERS POLISH
+   ========================================================= */
+
+#shared-site-navigation .header {
+  background: rgba(252, 250, 246, 0.96);
+  border-bottom: 1px solid rgba(184, 149, 74, 0.16);
+  box-shadow: 0 8px 28px rgba(44, 42, 40, 0.05);
+  backdrop-filter: blur(14px);
+}
+
+#shared-site-navigation .navrow {
+  min-height: 82px;
+  gap: 24px;
+}
+
+#shared-site-navigation .brand {
+  flex-shrink: 0;
+}
+
+#shared-site-navigation .brand img {
+  width: auto;
+  height: 58px;
+  object-fit: contain;
+}
+
+#shared-site-navigation .desktop-nav {
+  gap: 2px;
+  margin-left: auto;
+}
+
+#shared-site-navigation .desktop-nav a {
+  position: relative;
+  padding: 12px 11px;
+  color: var(--sage-dark);
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  transition: color .25s ease;
+}
+
+#shared-site-navigation .desktop-nav a::after {
+  content: '';
+  position: absolute;
+  left: 11px;
+  right: 11px;
+  bottom: 5px;
+  height: 1px;
+  background: var(--gold);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform .25s ease;
+}
+
+#shared-site-navigation .desktop-nav a:hover,
+#shared-site-navigation .desktop-nav a.active {
+  color: var(--burgundy);
+}
+
+#shared-site-navigation .desktop-nav a:hover::after,
+#shared-site-navigation .desktop-nav a.active::after {
+  transform: scaleX(1);
+}
+
+#shared-site-navigation .btn-primary {
+  min-height: 45px;
+  padding: 0 20px;
+  border-radius: 5px;
+  background: var(--burgundy);
+  color: var(--paper);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  box-shadow: 0 10px 24px -12px rgba(116, 31, 61, .55);
+}
+
+#shared-site-navigation .btn-primary:hover {
+  background: var(--burgundy-deep);
+  transform: translateY(-1px);
+}
+
+#shared-site-navigation .mobile-toggle {
+  border-color: rgba(184, 149, 74, .35);
+  color: var(--burgundy);
+  background: var(--paper);
+}
+
+#shared-site-navigation .mobile-nav {
+  background: rgba(252, 250, 246, .98);
+}
+
+#shared-site-navigation .mobile-nav a {
+  color: var(--sage-dark);
+  font-family: var(--sans);
+  font-size: 13px;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+}
+
+#shared-site-navigation .mobile-nav a:hover,
+#shared-site-navigation .mobile-nav a.active {
+  color: var(--burgundy);
+}
+
+#shared-site-navigation .mobile-nav .nav-inquiry {
+  border-color: var(--sage-dark);
+}
+
+/* Founders: softer, card-like edges instead of hard rectangular blocks. */
+.founders-section {
+  overflow: hidden;
+}
+
+.founders-feature,
+.founders-josephine {
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.founders-feature {
+  box-shadow: 0 18px 45px -28px rgba(44, 42, 40, .28);
+}
+
+.founders-josephine {
+  border: 1px solid rgba(184, 149, 74, .16);
+  box-shadow: 0 18px 45px -30px rgba(44, 42, 40, .20);
+}
+
+.josephine-photo,
+.founder-image-wrap {
+  overflow: hidden;
+}
+
+.josephine-photo img,
+.founder-image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 1100px) {
+  #shared-site-navigation .desktop-nav a {
+    padding-left: 7px;
+    padding-right: 7px;
+    font-size: 10px;
+  }
+
+  #shared-site-navigation .desktop-nav a::after {
+    left: 7px;
+    right: 7px;
+  }
+
+  #shared-site-navigation .navrow {
+    gap: 12px;
+  }
+}
+
+@media (max-width: 900px) {
+  #shared-site-navigation .desktop-nav {
+    display: none;
+  }
+
+  #shared-site-navigation .mobile-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #shared-site-navigation .navrow > div:last-child {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+  }
+
+  #shared-site-navigation .navrow > div:last-child > .btn-primary {
+    display: inline-flex;
+  }
+}
+
+@media (max-width: 560px) {
+  #shared-site-navigation .navrow {
+    min-height: 74px;
+  }
+
+  #shared-site-navigation .brand img {
+    height: 52px;
+  }
+
+  #shared-site-navigation .navrow > div:last-child > .btn-primary {
+    display: none;
+  }
+
+  .founders-feature,
+  .founders-josephine {
+    border-radius: 18px;
+  }
+}
