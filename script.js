@@ -1,3 +1,12 @@
+/* Shared navigation is loaded from nav.js so the header only needs to be edited once. */
+(function loadSharedNavigation() {
+  if (document.querySelector('script[src$="nav.js"]')) return;
+  const script = document.createElement("script");
+  script.src = "nav.js";
+  script.defer = true;
+  document.head.appendChild(script);
+})();
+
 const header = document.querySelector(".header");
 const toggle = document.querySelector(".mobile-toggle");
 const mobile = document.querySelector(".mobile-nav");
