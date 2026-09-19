@@ -1699,3 +1699,254 @@ main > section.hero:first-of-type .hero-copy::before {
   .josephine-copy { padding:45px 25px; }
   .founders-closing { padding-top:42px; }
 }
+
+
+/* =========================================================
+   HOMEPAGE MISSION — REFINED
+   ========================================================= */
+
+.home-mission {
+  --sage: #687563;
+  --sage-dark: #4d594b;
+  --burgundy: #6b3039;
+  --gold: #b4975a;
+  --cream: #f7f4ed;
+  --warm-white: #fcfbf8;
+  --muted: #73756d;
+
+  position: relative;
+  background: var(--warm-white);
+  padding: 125px 30px;
+  overflow: hidden;
+}
+
+.home-mission::before {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  top: -250px;
+  right: -180px;
+  background: rgba(180, 151, 90, 0.06);
+  pointer-events: none;
+}
+
+.home-mission-inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  column-gap: 90px;
+  row-gap: 75px;
+  position: relative;
+}
+
+.home-mission-heading {
+  padding-top: 5px;
+}
+
+.home-mission-eyebrow {
+  display: block;
+  font-family: "Outfit", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 3.5px;
+  color: var(--burgundy);
+  margin-bottom: 20px;
+}
+
+.home-mission-heading h2 {
+  margin: 0;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(55px, 6vw, 78px);
+  line-height: 0.9;
+  font-weight: 500;
+  letter-spacing: -1px;
+  color: var(--sage-dark);
+}
+
+.home-mission-heading h2 em {
+  color: var(--burgundy);
+  font-weight: 400;
+}
+
+.home-mission-crown {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: 260px;
+  margin-top: 32px;
+}
+
+.home-mission-crown span {
+  height: 1px;
+  flex: 1;
+  background: rgba(180, 151, 90, 0.55);
+}
+
+.home-mission-crown div {
+  font-family: Georgia, serif;
+  font-size: 25px;
+  color: var(--gold);
+}
+
+.home-mission-content {
+  max-width: 600px;
+  padding-top: 35px;
+}
+
+.home-mission-content p {
+  margin: 0 0 24px;
+  font-family: "Outfit", sans-serif;
+  font-size: 16px;
+  line-height: 1.85;
+  color: var(--muted);
+}
+
+.home-mission-content .home-mission-lead {
+  font-size: 19px;
+  line-height: 1.75;
+  color: var(--sage-dark);
+  margin-bottom: 28px;
+}
+
+.mission-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 14px;
+  padding-bottom: 7px;
+  border-bottom: 1px solid var(--gold);
+  text-decoration: none;
+  font-family: "Outfit", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--burgundy);
+  transition: gap 0.3s ease, color 0.3s ease;
+}
+
+.mission-link:hover {
+  gap: 20px;
+  color: var(--sage-dark);
+}
+
+.mission-arrow {
+  font-size: 18px;
+  line-height: 1;
+}
+
+.home-mission-quote {
+  grid-column: 1 / -1;
+  position: relative;
+  background: var(--cream);
+  padding: 55px 90px 50px;
+  margin-top: 5px;
+  border-left: 3px solid var(--gold);
+  text-align: center;
+}
+
+.home-mission-quote .quote-mark {
+  position: absolute;
+  left: 38px;
+  top: 30px;
+  font-family: Georgia, serif;
+  font-size: 70px;
+  line-height: 1;
+  color: var(--gold);
+  opacity: 0.55;
+}
+
+.home-mission-quote p {
+  max-width: 850px;
+  margin: 0 auto 28px;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(29px, 3.2vw, 42px);
+  line-height: 1.25;
+  font-weight: 400;
+  color: var(--sage-dark);
+}
+
+.home-mission-quote .quote-line {
+  width: 45px;
+  height: 1px;
+  background: var(--gold);
+  margin: 0 auto 17px;
+}
+
+.home-mission-quote > span {
+  font-family: "Outfit", sans-serif;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  color: var(--burgundy);
+}
+
+.reveal-mission {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.75s ease, transform 0.75s ease;
+}
+
+.reveal-mission.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 800px) {
+  .home-mission {
+    padding: 90px 24px;
+  }
+
+  .home-mission-inner {
+    display: block;
+  }
+
+  .home-mission-heading {
+    margin-bottom: 45px;
+  }
+
+  .home-mission-heading h2 {
+    font-size: clamp(52px, 15vw, 70px);
+  }
+
+  .home-mission-crown {
+    width: 220px;
+    margin-top: 27px;
+  }
+
+  .home-mission-content {
+    padding-top: 0;
+    margin-bottom: 60px;
+  }
+
+  .home-mission-content .home-mission-lead {
+    font-size: 17px;
+    line-height: 1.75;
+  }
+
+  .home-mission-quote {
+    padding: 48px 30px 42px;
+    margin-top: 0;
+  }
+
+  .home-mission-quote .quote-mark {
+    left: 15px;
+    top: 24px;
+    font-size: 52px;
+  }
+
+  .home-mission-quote p {
+    font-size: 29px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-mission {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
