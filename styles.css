@@ -1838,7 +1838,7 @@ main > section.hero:first-of-type .hero-copy::before {
 .josephine-placeholder {
   position: absolute;
   inset: 0;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   color: #687563;
