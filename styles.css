@@ -3466,3 +3466,89 @@ main > section.hero:first-of-type .hero-copy::after {
     top: 435px !important;
   }
 }
+
+
+/* =========================================================
+   HERO CTA STACK — STRUCTURAL FINAL FIX
+   ========================================================= */
+
+/* The two hero actions are one vertical stack.
+   This prevents the services link from being lost behind the photo. */
+main > section.hero:first-of-type .actions {
+  position: absolute !important;
+  top: 350px !important;
+  left: 56px !important;
+  z-index: 6 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  gap: 18px !important;
+  margin: 0 !important;
+}
+
+main > section.hero:first-of-type .actions .btn-primary {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+main > section.hero:first-of-type .actions .text-link {
+  position: static !important;
+  left: auto !important;
+  top: auto !important;
+  z-index: auto !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  width: max-content !important;
+  margin: 0 !important;
+  padding: 0 0 5px !important;
+  transform: none !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-bottom: 1px solid rgba(42,79,68,.35) !important;
+  color: var(--sage-dark) !important;
+  font-family: var(--sans) !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  line-height: 1.2 !important;
+  text-decoration: none !important;
+  white-space: nowrap !important;
+}
+
+main > section.hero:first-of-type .actions .text-link:hover {
+  color: var(--burgundy) !important;
+  border-bottom-color: var(--burgundy) !important;
+}
+
+@media (max-width: 700px) {
+  main > section.hero:first-of-type .actions {
+    top: 335px !important;
+    left: 20px !important;
+    right: 20px !important;
+    width: auto !important;
+    align-items: center !important;
+    gap: 18px !important;
+  }
+
+  main > section.hero:first-of-type .actions .btn-primary {
+    width: 100% !important;
+    max-width: 360px !important;
+    min-height: 50px !important;
+    margin: 0 !important;
+  }
+
+  main > section.hero:first-of-type .actions .text-link {
+    position: static !important;
+    width: max-content !important;
+    margin: 0 !important;
+    transform: none !important;
+    font-size: 13px !important;
+  }
+}
+
+@media (max-width: 420px) {
+  main > section.hero:first-of-type .actions {
+    top: 315px !important;
+  }
+}
