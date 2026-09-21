@@ -199,12 +199,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
 /* =========================================================
    DIVINE MOONLIGHT — FLOATING WHATSAPP CONTACT
-   Replace the blank whatsappNumber below with digits only,
+   Set whatsappNumber below to digits only,
    including country code, when the owner's number is ready.
    Example: "19195551234"
    ========================================================= */
 (function initFloatingWhatsApp() {
-  const whatsappNumber = "";
+  const whatsappNumber = "19843890943";
 
   function addWhatsAppButton() {
     if (document.getElementById("dm-whatsapp-float")) return;
@@ -214,7 +214,7 @@ document.addEventListener("DOMContentLoaded", () => {
     button.className = "dm-whatsapp-float";
     button.href = whatsappNumber
       ? "https://wa.me/" + whatsappNumber + "?text=" +
-        encodeURIComponent("Hi, I’m interested in learning more about Divine Moonlight Home Care Services.")
+        encodeURIComponent("Hello, I’m interested in talking with Divine Moonlight about your home care services. I found your website and would like to learn more about your services, availability, and how to get started. WhatsApp is the best way to reach me. Thank you!")
       : "#";
     button.target = whatsappNumber ? "_blank" : "_self";
     button.rel = "noopener noreferrer";
