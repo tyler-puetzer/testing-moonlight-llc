@@ -2812,25 +2812,15 @@ a#dm-whatsapp-float.dm-whatsapp-pending {
     transform: none !important;
   }
 
-  /* Fade the photo smoothly into the cream text area instead of
-     placing a heavy overlay over the whole photograph. */
+  /* Keep the mobile image clean until the dedicated mobile image is added. */
   main > section.hero:first-of-type .hero-image::after {
     background:
       linear-gradient(
-        90deg,
-        rgba(247,243,236,.98) 0%,
-        rgba(247,243,236,.88) 18%,
-        rgba(247,243,236,.58) 40%,
-        rgba(247,243,236,.22) 62%,
-        rgba(247,243,236,.04) 82%,
-        rgba(247,243,236,0) 100%
-      ),
-      linear-gradient(
         180deg,
-        rgba(247,243,236,.28) 0%,
-        rgba(247,243,236,0) 24%,
-        rgba(247,243,236,0) 76%,
-        rgba(247,243,236,.28) 100%
+        rgba(247,243,236,1) 0%,
+        rgba(247,243,236,.72) 10%,
+        rgba(247,243,236,.12) 30%,
+        rgba(247,243,236,0) 52%
       ) !important;
   }
 
@@ -2900,5 +2890,33 @@ a#dm-whatsapp-float.dm-whatsapp-pending {
 
   main > section.hero:first-of-type .text-link {
     top: 397px !important;
+  }
+}
+
+
+/* =========================================================
+   DIVINE MOONLIGHT — DESKTOP HERO FADE
+   Heavy fade on the left, gradually lighter toward the right,
+   with a subtle fade at the top and bottom.
+   ========================================================= */
+@media (min-width: 701px) {
+  main > section.hero:first-of-type .hero-image::after {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(247,243,236,.98) 0%,
+        rgba(247,243,236,.88) 18%,
+        rgba(247,243,236,.58) 40%,
+        rgba(247,243,236,.22) 62%,
+        rgba(247,243,236,.04) 82%,
+        rgba(247,243,236,0) 100%
+      ),
+      linear-gradient(
+        180deg,
+        rgba(247,243,236,.28) 0%,
+        rgba(247,243,236,0) 24%,
+        rgba(247,243,236,0) 76%,
+        rgba(247,243,236,.28) 100%
+      ) !important;
   }
 }
