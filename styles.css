@@ -570,7 +570,13 @@ main > section.hero:first-of-type .hero-image {
   overflow: hidden !important;
 }
 
-main > section.hero:first-of-type .hero-image img {
+main > section.hero:first-of-type .hero-image picture {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.hero-image img {
   display: block !important;
   width: 100% !important;
   height: 100% !important;
