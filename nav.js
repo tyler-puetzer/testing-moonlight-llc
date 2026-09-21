@@ -15,7 +15,7 @@
         <nav aria-label="Primary" class="desktop-nav">
           <a data-nav="home" href="index.html">Home</a>
           <a data-nav="services" href="services.html">Services</a>
-          <a data-nav="about" href="about.html">About Us</a>
+          <a data-nav="about" href="mission.html">About Us</a>
           <a data-nav="team" href="team.html">Our Team</a>
           <a data-nav="service-areas" href="service-areas.html">Service Areas</a>
           <a data-nav="careers" href="careers.html">Careers</a>
@@ -30,7 +30,7 @@
         <nav aria-label="Mobile">
           <a data-nav="home" href="index.html">Home</a>
           <a data-nav="services" href="services.html">Services</a>
-          <a data-nav="about" href="about.html">About Us</a>
+          <a data-nav="about" href="mission.html">About Us</a>
           <a data-nav="team" href="team.html">Our Team</a>
           <a data-nav="service-areas" href="service-areas.html">Service Areas</a>
           <a data-nav="careers" href="careers.html">Careers</a>
@@ -61,7 +61,7 @@
       "index.html": "home",
       "": "home",
       "services.html": "services",
-      "about.html": "about",
+      "mission.html": "about",
       "team.html": "team",
       "service-areas.html": "service-areas",
       "careers.html": "careers",
