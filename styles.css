@@ -3552,3 +3552,46 @@ main > section.hero:first-of-type .actions .text-link:hover {
     top: 315px !important;
   }
 }
+
+
+/* =========================================================
+   HERO FINAL POLISH — CTA ORDER + BOTTOM SECTION FADE
+   ========================================================= */
+
+/* Keep Request Care first and Explore Our Services directly below it. */
+main > section.hero:first-of-type .actions {
+  flex-direction: column !important;
+}
+
+main > section.hero:first-of-type .actions .btn-primary {
+  order: 1 !important;
+}
+
+main > section.hero:first-of-type .actions .text-link {
+  order: 2 !important;
+}
+
+/* Softly fade the bottom of the hero image into the next section.
+   The horizontal desktop fade remains on .hero-grid::before. */
+@media (min-width: 701px) {
+  main > section.hero:first-of-type .hero-image::after {
+    content: '' !important;
+    display: block !important;
+    position: absolute !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    top: auto !important;
+    height: 24% !important;
+    z-index: 2 !important;
+    pointer-events: none !important;
+    background: linear-gradient(
+      to bottom,
+      rgba(247,243,236,0) 0%,
+      rgba(247,243,236,.08) 18%,
+      rgba(247,243,236,.28) 42%,
+      rgba(247,243,236,.58) 68%,
+      var(--cream) 100%
+    ) !important;
+  }
+}
