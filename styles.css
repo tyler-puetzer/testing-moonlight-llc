@@ -3323,3 +3323,146 @@ main > section.hero:first-of-type .hero-copy::after {
     top: 382px !important;
   }
 }
+
+
+/* =========================================================
+   HERO STRUCTURE FIX — MOBILE SERVICE LINK + ROBUST DESKTOP FADE
+   ========================================================= */
+
+/* Use the hero-grid as the actual visual stacking surface.
+   This puts the fade above the photo but below all hero copy. */
+@media (min-width: 701px) {
+  main > section.hero:first-of-type .hero-grid::before {
+    content: '' !important;
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 3 !important;
+    pointer-events: none !important;
+    display: block !important;
+    background: linear-gradient(
+      90deg,
+      var(--cream) 0%,
+      var(--cream) 33%,
+      rgba(247,243,236,.98) 42%,
+      rgba(247,243,236,.82) 50%,
+      rgba(247,243,236,.58) 58%,
+      rgba(247,243,236,.34) 66%,
+      rgba(247,243,236,.14) 75%,
+      rgba(247,243,236,0) 84%,
+      rgba(247,243,236,0) 100%
+    ) !important;
+  }
+
+  /* Keep every piece of hero copy above the fade. */
+  main > section.hero:first-of-type .hero-copy {
+    z-index: 4 !important;
+  }
+
+  main > section.hero:first-of-type h1,
+  main > section.hero:first-of-type .hero-copy::after {
+    z-index: 5 !important;
+  }
+
+  /* Disable every older image fade on desktop so there is only one. */
+  main > section.hero:first-of-type .hero-image::before,
+  main > section.hero:first-of-type .hero-image::after {
+    content: none !important;
+    display: none !important;
+  }
+}
+
+/* Mobile: show the two CTAs as two distinct elements.
+   Request Care is the button; Explore Our Services is plain text. */
+@media (max-width: 700px) {
+  main > section.hero:first-of-type .hero-copy {
+    z-index: 4 !important;
+  }
+
+  main > section.hero:first-of-type .actions {
+    position: absolute !important;
+    top: 335px !important;
+    left: 20px !important;
+    right: 20px !important;
+    z-index: 6 !important;
+    width: auto !important;
+    margin: 0 !important;
+    display: block !important;
+  }
+
+  main > section.hero:first-of-type .actions .btn-primary {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: min(100%, 360px) !important;
+    min-height: 50px !important;
+    margin: 0 auto !important;
+    box-sizing: border-box !important;
+  }
+
+  main > section.hero:first-of-type .text-link {
+    position: absolute !important;
+    top: 405px !important;
+    left: 50% !important;
+    right: auto !important;
+    z-index: 7 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    width: max-content !important;
+    margin: 0 !important;
+    padding: 0 0 5px !important;
+    transform: translateX(-50%) !important;
+    color: var(--sage-dark) !important;
+    background: transparent !important;
+    border: 0 !important;
+    border-bottom: 1px solid rgba(42,79,68,.35) !important;
+    font-family: var(--sans) !important;
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    line-height: 1.2 !important;
+    text-decoration: none !important;
+    white-space: nowrap !important;
+  }
+
+  /* Keep the mobile photo lower so the CTA area stays visually separate. */
+  main > section.hero:first-of-type .hero-image {
+    top: 455px !important;
+    bottom: 0 !important;
+    height: auto !important;
+    opacity: 1 !important;
+    z-index: 0 !important;
+  }
+
+  main > section.hero:first-of-type .hero-image::before {
+    content: '' !important;
+    display: block !important;
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 1 !important;
+    background: linear-gradient(
+      180deg,
+      rgba(247,243,236,.12) 0%,
+      rgba(247,243,236,0) 100%
+    ) !important;
+  }
+
+  main > section.hero:first-of-type .hero-image::after {
+    content: none !important;
+    display: none !important;
+  }
+}
+
+@media (max-width: 420px) {
+  main > section.hero:first-of-type .actions {
+    top: 315px !important;
+  }
+
+  main > section.hero:first-of-type .text-link {
+    top: 385px !important;
+  }
+
+  main > section.hero:first-of-type .hero-image {
+    top: 435px !important;
+  }
+}
