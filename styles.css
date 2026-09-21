@@ -3099,3 +3099,104 @@ a#dm-whatsapp-float.dm-whatsapp-pending {
     bottom: 24px !important;
   }
 }
+
+
+/* =========================================================
+   HERO FINAL FIX — DESKTOP FADE / CTA / NURSING POOL
+   ========================================================= */
+
+/* Keep the photo underneath a single full-width fade layer. */
+main > section.hero:first-of-type .hero-image img {
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+main > section.hero:first-of-type .hero-image::after {
+  content: '' !important;
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 2 !important;
+  pointer-events: none !important;
+}
+
+@media (min-width: 701px) {
+  main > section.hero:first-of-type .hero-image::after {
+    /* Solid cream through the left third, then a smooth transition
+       until the photograph is completely unobstructed in the right third. */
+    background: linear-gradient(
+      90deg,
+      rgba(247,243,236,1) 0%,
+      rgba(247,243,236,1) 33.333%,
+      rgba(247,243,236,.82) 43%,
+      rgba(247,243,236,.58) 52%,
+      rgba(247,243,236,.30) 61%,
+      rgba(247,243,236,.08) 70%,
+      rgba(247,243,236,0) 78%,
+      rgba(247,243,236,0) 100%
+    ) !important;
+  }
+
+  /* Show both desktop hero actions. */
+  main > section.hero:first-of-type .actions .btn-secondary {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-height: 54px !important;
+    padding: 0 24px !important;
+    border: 1px solid rgba(42,79,68,.38) !important;
+    border-radius: 999px !important;
+    color: var(--sage-dark) !important;
+    background: rgba(247,243,236,.72) !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+  }
+
+  main > section.hero:first-of-type .actions .btn-secondary:hover {
+    background: rgba(247,243,236,.94) !important;
+    border-color: var(--sage-dark) !important;
+  }
+}
+
+/* The nursing-pool hero label ends at CNA. */
+main > section.hero:first-of-type .hero-copy::after {
+  content: 'NURSING POOL   ·   RN · LPN · CNA' !important;
+}
+
+/* Mobile: Explore Our Services sits to the LEFT of Request Care. */
+@media (max-width: 700px) {
+  main > section.hero:first-of-type .actions {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: stretch !important;
+    justify-content: center !important;
+    gap: 10px !important;
+  }
+
+  main > section.hero:first-of-type .actions .btn-secondary {
+    display: inline-flex !important;
+    order: 1 !important;
+    flex: 1 1 0 !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-width: 0 !important;
+    min-height: 50px !important;
+    padding: 0 10px !important;
+    border: 1px solid rgba(42,79,68,.45) !important;
+    border-radius: 999px !important;
+    color: var(--sage-dark) !important;
+    background: rgba(247,243,236,.88) !important;
+    font-size: 11px !important;
+    font-weight: 600 !important;
+    white-space: nowrap !important;
+  }
+
+  main > section.hero:first-of-type .actions .btn-primary {
+    order: 2 !important;
+    flex: 1 1 0 !important;
+    min-width: 0 !important;
+    padding: 0 10px !important;
+    white-space: nowrap !important;
+  }
+}
+
