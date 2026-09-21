@@ -22,7 +22,7 @@
           <a data-nav="contact" href="contact.html">Contact</a>
         </nav>
         <div>
-          <a class="btn btn-primary" href="appointments.html">Request Care</a>
+          <a class="btn btn-primary" href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAN__7UrW5lUNjZPMURaNVk0UjdXNktGN1ZVVE9MTUhaUS4u">Request Care</a>
           <button aria-expanded="false" aria-label="Open menu" class="mobile-toggle">☰</button>
         </div>
       </div>
@@ -35,8 +35,8 @@
           <a data-nav="service-areas" href="service-areas.html">Service Areas</a>
           <a data-nav="careers" href="careers.html">Careers</a>
           <a data-nav="contact" href="contact.html">Contact</a>
-          <a class="btn btn-primary" href="appointments.html">Request Care</a>
-          <a class="btn btn-secondary nav-inquiry" href="inquiry.html">General Inquiry</a>
+          <a class="btn btn-primary" href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAN__7UrW5lUNjZPMURaNVk0UjdXNktGN1ZVVE9MTUhaUS4u">Request Care</a>
+          <a class="btn btn-secondary nav-inquiry" href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAN__7UrW5lURFkyTFRUS0xTOEg3N1VOQk1XREpQUDBSNS4u">General Inquiry</a>
         </nav>
       </div>
     </header>
