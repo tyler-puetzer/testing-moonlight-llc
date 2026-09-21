@@ -2926,3 +2926,176 @@ a#dm-whatsapp-float.dm-whatsapp-pending {
       ) !important;
   }
 }
+
+
+/* =========================================================
+   DIVINE MOONLIGHT — HERO FINAL RESPONSIVE LAYOUT
+   Desktop keeps the editorial left-to-right fade.
+   Mobile follows: title → service area → paragraph →
+   side-by-side actions → action-focused photo → nursing pool.
+   ========================================================= */
+
+@media (min-width: 701px) {
+  main > section.hero:first-of-type .hero-image::after {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(247,243,236,1) 0%,
+        rgba(247,243,236,.97) 18%,
+        rgba(247,243,236,.88) 34%,
+        rgba(247,243,236,.62) 49%,
+        rgba(247,243,236,.30) 64%,
+        rgba(247,243,236,.08) 82%,
+        rgba(247,243,236,0) 100%
+      ),
+      linear-gradient(
+        180deg,
+        rgba(247,243,236,.22) 0%,
+        rgba(247,243,236,0) 18%,
+        rgba(247,243,236,0) 82%,
+        rgba(247,243,236,.22) 100%
+      ) !important;
+  }
+}
+
+@media (max-width: 700px) {
+  main > section.hero:first-of-type {
+    min-height: 900px !important;
+    height: 900px !important;
+  }
+
+  main > section.hero:first-of-type .hero-copy > .container {
+    padding: 0 20px !important;
+  }
+
+  main > section.hero:first-of-type h1 {
+    top: 18px !important;
+    left: 0 !important;
+    right: 0 !important;
+    padding: 0 12px !important;
+    font-size: clamp(43px, 12vw, 60px) !important;
+    line-height: .9 !important;
+  }
+
+  main > section.hero:first-of-type .eyebrow {
+    top: 145px !important;
+    left: 20px !important;
+    right: 20px !important;
+    font-size: 10px !important;
+    letter-spacing: .11em !important;
+    text-align: center !important;
+  }
+
+  main > section.hero:first-of-type .hero-copy > .container > p {
+    top: 185px !important;
+    left: 20px !important;
+    right: 20px !important;
+    max-width: 520px !important;
+    margin: 0 auto !important;
+    font-size: 15.5px !important;
+    line-height: 1.55 !important;
+    text-align: center !important;
+  }
+
+  main > section.hero:first-of-type .actions {
+    top: 335px !important;
+    left: 20px !important;
+    right: 20px !important;
+    width: auto !important;
+    justify-content: center !important;
+    gap: 10px !important;
+  }
+
+  main > section.hero:first-of-type .actions .btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex: 1 1 0 !important;
+    min-width: 0 !important;
+    min-height: 50px !important;
+    padding: 0 14px !important;
+    font-size: 12px !important;
+    white-space: nowrap !important;
+  }
+
+  main > section.hero:first-of-type .actions .btn-secondary {
+    border: 1px solid rgba(42,79,68,.45) !important;
+    color: var(--sage-dark) !important;
+    background: rgba(247,243,236,.88) !important;
+  }
+
+  main > section.hero:first-of-type .text-link {
+    display: none !important;
+  }
+
+  main > section.hero:first-of-type .hero-image {
+    top: 425px !important;
+    right: 0 !important;
+    bottom: auto !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 350px !important;
+    z-index: 0 !important;
+    border-radius: 0 !important;
+  }
+
+  main > section.hero:first-of-type .hero-image img {
+    object-position: center 42% !important;
+    transform: scale(1.06) !important;
+  }
+
+  main > section.hero:first-of-type .hero-image::after {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(247,243,236,0) 0%,
+        rgba(247,243,236,0) 72%,
+        rgba(247,243,236,.72) 100%
+      ) !important;
+  }
+
+  main > section.hero:first-of-type .hero-copy::after {
+    left: 20px !important;
+    right: 20px !important;
+    bottom: 28px !important;
+    padding: 14px 0 0 !important;
+    text-align: center !important;
+    border-top: 1px solid rgba(42,79,68,.22) !important;
+    font-size: 9px !important;
+    letter-spacing: .11em !important;
+  }
+}
+
+@media (max-width: 420px) {
+  main > section.hero:first-of-type {
+    min-height: 850px !important;
+    height: 850px !important;
+  }
+
+  main > section.hero:first-of-type h1 {
+    top: 16px !important;
+    font-size: clamp(40px, 12vw, 53px) !important;
+  }
+
+  main > section.hero:first-of-type .eyebrow {
+    top: 132px !important;
+  }
+
+  main > section.hero:first-of-type .hero-copy > .container > p {
+    top: 172px !important;
+    font-size: 15px !important;
+  }
+
+  main > section.hero:first-of-type .actions {
+    top: 315px !important;
+  }
+
+  main > section.hero:first-of-type .hero-image {
+    top: 400px !important;
+    height: 325px !important;
+  }
+
+  main > section.hero:first-of-type .hero-copy::after {
+    bottom: 24px !important;
+  }
+}
