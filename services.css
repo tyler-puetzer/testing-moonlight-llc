@@ -157,6 +157,7 @@
   letter-spacing: .18em;
 }
 
+.services-heading h1,
 .services-heading h2 {
   margin: 15px 0 10px;
   color: var(--services-sage);
