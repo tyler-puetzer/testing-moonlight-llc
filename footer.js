@@ -8,6 +8,7 @@
   const logoPath = "media/logo%231.png";
   const requestCareUrl = "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAN__7UrW5lUNjZPMURaNVk0UjdXNktGN1ZVVE9MTUhaUS4u";
   const inquiryUrl = "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAN__7UrW5lURFkyTFRUS0xTOEg3N1VOQk1XREpQUDBSNS4u";
+  const reviewUrl = "https://share.google/ayrhxBCKSYw2v3CpA";
 
   const footerMarkup = `
     <footer class="footer">
@@ -37,7 +38,7 @@
           <ul>
             <li><a href="${inquiryUrl}">General Inquiry</a></li>
             <li><a href="${requestCareUrl}">Request Care</a></li>
-            <li><a href="index.html#testimonials">Leave a Review</a></li>
+            <li><a href="${reviewUrl}" target="_blank" rel="noopener noreferrer">Leave a Review</a></li>
           </ul>
         </div>
 
